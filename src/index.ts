@@ -54,7 +54,7 @@ const jupiterSwap = async ({
           ); 
           process.stdout.write(`${inputToken.symbol} -> `);
           process.stdout.write(
-            `${swapResult.outputAmount / (10 ** inputToken.decimals)} `
+            `${swapResult.outputAmount / (10 ** outputToken.decimals)} `
           );
           process.stdout.write(`${outputToken.symbol}: `);
           console.log(`https://solscan.io/tx/${swapResult.txid}`);
