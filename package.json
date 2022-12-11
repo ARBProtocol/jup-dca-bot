@@ -24,7 +24,7 @@
     "isomorphic-fetch": "^3.0.0",
     "jsbi": "^4.3.0",
     "node-cron": "^3.0.0",
-    "node-fetch": "^2.6.6"
+    "node-fetch": "^2.6.6",
     "circular-json": "^0.5.9"
   },
   "devDependencies": {
