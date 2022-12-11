@@ -46,32 +46,38 @@ const jupiterSwap = async ({
         })
         : null;
 
-      if (routes && routes.routesInfos) {
-        // Prepare execute exchange
-        const { execute } = await jupiter.exchange({
-          routeInfo: routes!.routesInfos[0],
-        });
-        // Execute swap
-        // Force any to ignore TS misidentifying SwapResult type
-        const swapResult: any = await execute();
-        if (swapResult.error) {
-          console.log(swapResult.error);
-        } else {
-          // trying to keep these on one line
-          process.stdout.write(
-            `${swapResult.inputAmount / (10 ** inputToken.decimals)} `
-          ); 
-          process.stdout.write(`${inputToken.symbol} -> `);
-          process.stdout.write(
-            `${swapResult.outputAmount / (10 ** outputToken.decimals)} `
-          );
-          process.stdout.write(`${outputToken.symbol}: `);
-          console.log(`https://solscan.io/tx/${swapResult.txid}`);
-        }
+      if (tradingEnabled){
+          if (routes && routes.routesInfos) {
+            // Prepare execute exchange
+            const { execute } = await jupiter.exchange({
+              routeInfo: routes!.routesInfos[0],
+            });
+            // Execute swap
+            // Force any to ignore TS misidentifying SwapResult type
+            const swapResult: any = await execute();
+            if (swapResult.error) {
+              console.log(swapResult.error);
+            } else {
+              // trying to keep these on one line
+              process.stdout.write(
+                `${swapResult.inputAmount / (10 ** inputToken.decimals)} `
+              ); 
+              process.stdout.write(`${inputToken.symbol} -> `);
+              process.stdout.write(
+                `${swapResult.outputAmount / (10 ** outputToken.decimals)} `
+              );
+              process.stdout.write(`${outputToken.symbol}: `);
+              console.log(`https://solscan.io/tx/${swapResult.txid}`);
+            }
+          } else {
+            console.log("Error during jupiter.computeRoutes().");
+          }
       } else {
-        console.log("Error during jupiter.computeRoutes().");
+        console.log("Trading not enabled. You need to enable it in the .env for swaps to take place.");
       }
-  } catch (error) {
+
+    
+    } catch (error) {
     throw error;
   }
 };
