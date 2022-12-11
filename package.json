@@ -1,5 +1,5 @@
 {
-  "name": "jup-dca-bot",
+  "name": "jupv3-dca-bot",
   "version": "0.2.0",
   "description": "Dollar cost averaging bot on Solana",
   "source": "src/index.ts",
@@ -7,7 +7,8 @@
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts",
+    "trade": "ts-node ./src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,10 +21,11 @@
     "@types/isomorphic-fetch": "^0.0.35",
     "bs58": "^4.0.1",
     "cronstrue": "^1.125.0",
-    "dotenv": "^10.0.0",
     "isomorphic-fetch": "^3.0.0",
+    "jsbi": "^4.3.0",
     "node-cron": "^3.0.0",
-    "node-fetch": "^3.1.0"
+    "node-fetch": "^2.6.6"
+    "circular-json": "^0.5.9"
   },
   "devDependencies": {
     "@types/node-cron": "^3.0.1",
