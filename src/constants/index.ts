@@ -3,6 +3,7 @@ import bs58 from "bs58";
 import 'dotenv/config'
 
 export const SOLANA_RPC_ENDPOINT: string = process.env.RPC_ENDPOINT!;
+export const WRAP_UNWRAP_SOL: boolean =  process.env.WRAP_UNWRAP_SOL === undefined ? true : process.env.WRAP_UNWRAP_SOL === "true";
 
 // Wallets
 export const WALLET_PRIVATE_KEY =
