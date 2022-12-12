@@ -5,6 +5,7 @@ import 'dotenv/config'
 export const SOLANA_RPC_ENDPOINT: string = process.env.RPC_ENDPOINT!;
 export const WRAP_UNWRAP_SOL: boolean =  process.env.WRAP_UNWRAP_SOL === undefined ? true : process.env.WRAP_UNWRAP_SOL === "true";
 export const tradingEnabled: boolean = process.env.TRADING_ENABLED === undefined ? true : process.env.TRADING_ENABLED === "true";
+export const tradingRetries: number = process.env.TRADING_RETRIES  === undefined ? 0 : Number(process.env.TRADING_RETRIES);
 
 // Wallets
 export const WALLET_PRIVATE_KEY =
