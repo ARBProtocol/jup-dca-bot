@@ -30,7 +30,6 @@ Note: the minimum interval is one minute.
 yarn start
 ```
 ## Improvements
-- transaction retries. Not great to fail on swaps that may occur once-a-week or biweekly.
 - start and end dates.
 - Log to remote database for tracking
 - Auto enable / diable and adjustments for timing & amounts based on custom trading approach ruleset(s)
