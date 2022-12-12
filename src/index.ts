@@ -69,7 +69,7 @@ const jupiterSwap = async ({
           let i: number = 0;
 
           do {
-            process.stdout.write( await ptst() + " - recurring DCA Swap Attempt #" + (i+1) )
+            process.stdout.write( await ptst() + " - recurring DCA Swap Attempt #" + (i+1) + " - " )
             i++;
 
             try {
@@ -91,7 +91,7 @@ const jupiterSwap = async ({
 
             if (routes && routes.routesInfos) {
            
-                console.log(" - " + routes.routesInfos.length + ' routes found');
+                console.log(routes.routesInfos.length + ' routes found');
 
                 const { execute } = await jupiter.exchange({
                   routeInfo: routes!.routesInfos[0],
@@ -126,7 +126,7 @@ const jupiterSwap = async ({
               }
 
         } catch (error) {
-          console.log('Failure in route loop lookup.');
+          console.log(await ptst() + " - Failure in route loop lookup.");
           throw error;
         }
 
@@ -134,10 +134,8 @@ const jupiterSwap = async ({
 
         } while ( i< tradingRetries)
 
-
-
       } else {
-        console.log("Trading not enabled. You need to enable it in the .env for swaps to take place.");
+        console.log(await ptst() + " - Trading not enabled. You need to enable it in the .env for swaps to take place.");
       }
 
 
