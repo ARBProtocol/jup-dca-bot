@@ -48,28 +48,13 @@ const jupiterSwap = async ({
         ? JSBI.BigInt(Math.round(inputAmount * 10 ** inputToken.decimals))
         : JSBI.BigInt(0);
     
-      const routes = inputToken && outputToken
-        ? await jupiter.computeRoutes({
-            inputMint: new PublicKey(inputToken.address),
-            outputMint: new PublicKey(outputToken.address),
-            amount: inputAmountInSmallestUnits,
-            slippageBps: slippage,
-            feeBps: 0,
-            forceFetch: true,
-            onlyDirectRoutes: false,
-            filterTopNResult: 2,
-            enforceSingleTx: false,
-            swapMode: SwapMode.ExactIn,
-        })
-        : null;
-
       if (tradingEnabled){
 
           // handle transaction retries
           let i: number = 0;
 
           do {
-            process.stdout.write( await ptst() + " - recurring DCA Swap Attempt #" + (i+1) + " - " )
+            process.stdout.write( await ptst() + " - Recurring DCA Swap Attempt #" + (i+1) + " - " )
             i++;
 
             try {
