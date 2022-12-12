@@ -1,6 +1,6 @@
 {
   "name": "jupv3-dca-bot",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Dollar cost averaging bot on Solana",
   "source": "src/index.ts",
   "main": "src/index.ts",
