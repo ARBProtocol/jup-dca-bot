@@ -1,29 +1,31 @@
 {
-  "name": "jup-dca-bot",
-  "version": "0.1.0",
+  "name": "jupv3-dca-bot",
+  "version": "0.2.0",
   "description": "Dollar cost averaging bot on Solana",
   "source": "src/index.ts",
   "main": "src/index.ts",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts",
+    "trade": "ts-node ./src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jup-ag/core": "^1.0.0-beta.16",
+    "@jup-ag/core": "^3.0.0-beta.8",
     "@solana/wallet-adapter-base": "^0.7.1",
-    "@solana/web3.js": "^1.36.0",
+    "@solana/web3.js": "^1.66.1",
     "@types/bs58": "^4.0.1",
     "@types/isomorphic-fetch": "^0.0.35",
     "bs58": "^4.0.1",
     "cronstrue": "^1.125.0",
-    "dotenv": "^10.0.0",
     "isomorphic-fetch": "^3.0.0",
+    "jsbi": "^4.3.0",
     "node-cron": "^3.0.0",
-    "node-fetch": "^3.1.0"
+    "node-fetch": "^2.6.6",
+    "circular-json": "^0.5.9"
   },
   "devDependencies": {
     "@types/node-cron": "^3.0.1",
