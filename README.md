@@ -29,7 +29,7 @@ Note: the minimum interval is one minute.
 ```
 yarn start
 ```
-## Improvements
-- start and end dates.
+## Future Pending Improvements
+- Improved error and transaction retry logic
 - Log to remote database for tracking
-- Auto enable / diable and adjustments for timing & amounts based on custom trading approach ruleset(s)
+- Auto enable / disable and adjustments for timing & amounts based on custom trading approach ruleset(s)
