@@ -140,7 +140,6 @@ const jupiterSwap = async ({
 
 
   } catch (error) {
-    console.log('Throw error check on tokens');
     throw error;
   }
 };              
