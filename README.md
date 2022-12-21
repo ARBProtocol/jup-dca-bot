@@ -5,8 +5,6 @@ This code was adapted from ARBProtocol's jup-dca-bot orginally written by [Jeral
 
 It is best practice **not to store tokens** on the wallet used with this bot apart from what is needed for swapping. Setting up a schedule to move tokens (not needed on the wallet) to a cold-storage hardware backed wallet (aka Ledger wallet) should be implemented to secure the DCA tokens being collected.
 
-Based on the [ARB Protocol DCA Bot](https://github.com/ARBProtocol/jup-dca-bot)
-
 ![Jup DCA Bot Demo](img/demo.gif)
 
 ## Install
