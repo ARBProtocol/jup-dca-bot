@@ -69,7 +69,6 @@ const jupiterSwap = async ({
                 forceFetch: true,
                 onlyDirectRoutes: false,
                 filterTopNResult: 1,
-                enforceSingleTx: false,
                 swapMode: SwapMode.ExactIn,
             })
             : null;
