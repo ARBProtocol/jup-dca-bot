@@ -1,5 +1,5 @@
-# Jup V3 DCA Bot 
-This bot runs a simple dollar cost averaging strategy to buy assets over a period of time. It utilizes [Jupiter Aggregator](https://jup.ag), a swap aggregator on Solana using their SDK V3. It has built in rudimentary retry logic for failed transactions. 
+# Jup V4 DCA Bot 
+This bot runs a simple dollar cost averaging strategy to buy assets over a period of time. It utilizes [Jupiter Aggregator](https://jup.ag), a swap aggregator on Solana using their SDK V4. It has built in rudimentary retry logic for failed transactions. 
 
 This code was adapted from ARBProtocol's jup-dca-bot orginally written by [Jerald Tomada](https://github.com/jtomada/) and has been updated to experiment and learn. It has not been thoroughly tested and is unaudited. Please use at your own risk!
 
