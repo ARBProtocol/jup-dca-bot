@@ -69,7 +69,6 @@ const jupiterSwap = async ({
                 forceFetch: true,
                 onlyDirectRoutes: false,
                 filterTopNResult: 1,
-                enforceSingleTx: false,
                 swapMode: SwapMode.ExactIn,
             })
             : null;
@@ -132,7 +131,7 @@ const jupiterSwap = async ({
               
 const main = async () => {
   try {
-    console.log(setcolour("Starting Jupiter V3 DCA Bot",92));
+    console.log(setcolour("Starting Jupiter V4 DCA Bot",92));
     console.log("The bot will retry "+String(tradingRetries)+" times if the swap fails for each scheduled period.");
     
     const cluster = "mainnet-beta"; // Force mainnet, as this uses Jupiter which is not deployed on devnet/testnet
